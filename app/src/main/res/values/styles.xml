@@ -1,0 +1,7 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="LightTheme" parent="android:Theme.DeviceDefault.Light" />
+    <style name="DarkTeme" parent="android:Theme.DeviceDefault.NoActionBar" />
+
+</resources>
