@@ -10,11 +10,12 @@
     </string-array>
 
     <string-array name="listSubject">
-        <item>Hat ve Sefer Saatleri</item>
+        <item>Hat ve Sefer</item>
         <item>Duraklar</item>
         <item>Otobüs</item>
         <item>Personel</item>
         <item>İzmirim Kart</item>
+        <item>Diğer</item>
     </string-array>
 
 

@@ -53,14 +53,14 @@ public class MainActivity extends Activity {
 
     public void clickSend(View view) {
 
-        String key =  messages.child(getLocalDate(false)).child(spinnerType.getSelectedItem().toString()).child(spinnerSubject.getSelectedItem().toString()).push().getKey();
+        String key =  messages.child(GetDate.getDate(false,null)).child(spinnerType.getSelectedItem().toString()).child(spinnerSubject.getSelectedItem().toString()).push().getKey();
 
         assert key != null;
-        ref = messages.child(getLocalDate(false)).child(spinnerType.getSelectedItem().toString()).child(spinnerSubject.getSelectedItem().toString()).child(key);
+        ref = messages.child(GetDate.getDate(false,null)).child(spinnerType.getSelectedItem().toString()).child(spinnerSubject.getSelectedItem().toString()).child(key);
 
         HashMap<String,String> eMsg = new HashMap();
         eMsg.put("Message", editText.getText().toString());
-        eMsg.put("Local Date", getLocalDate(true));
+        eMsg.put("Local Date", GetDate.getDate(true,null));
 
         try{
 
@@ -77,19 +77,5 @@ public class MainActivity extends Activity {
 
             Toast.makeText(MainActivity.this, "Bağlantı hatası mesajınız iletilemedi",Toast.LENGTH_LONG).show();
         }
-    }
-
-    @SuppressLint("SimpleDateFormat")
-    public String getLocalDate(boolean type) {
-
-        Calendar c = Calendar.getInstance();
-        SimpleDateFormat sdf;
-
-        if(type)
-            sdf = new SimpleDateFormat("HH:mm dd/MM/yyyy");
-        else
-            sdf = new SimpleDateFormat("dd-MM-yyyy");
-
-        return sdf.format(c.getTime());
     }
 }
