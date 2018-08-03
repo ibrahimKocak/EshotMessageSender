@@ -10,7 +10,6 @@ public class GetDate {
     private static Calendar calendar;
     private static SimpleDateFormat sdf;
 
-
     @SuppressLint("SimpleDateFormat")
     public static String getDate(boolean withClock, String timestamp) {
 
@@ -19,7 +18,7 @@ public class GetDate {
         if(withClock)
             sdf = new SimpleDateFormat("HH:mm dd/MM/yyyy");
         else
-            sdf = new SimpleDateFormat("dd-MM-yyyy");
+            sdf = new SimpleDateFormat("yyyy-MM-dd");
 
         if(timestamp != null)
             calendar.setTimeInMillis(Long.valueOf(timestamp));

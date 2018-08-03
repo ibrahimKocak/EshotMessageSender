@@ -5,12 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="50dp"
-    android:background="@drawable/eshot3"
-    android:gravity="bottom"
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:layout_marginHorizontal="30dp"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:weightSum="2"
@@ -22,37 +20,44 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_margin="20dp"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <Spinner
-                    android:id="@+id/spinnerType"
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:src="@drawable/eshotbackground"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
             </LinearLayout>
 
             <LinearLayout
-                android:layout_margin="20dp"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <Spinner
+                    android:layout_margin="5dp"
+                    android:id="@+id/spinnerType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:layout_margin="5dp"
                     android:id="@+id/spinnerSubject"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
+
             <LinearLayout
-                android:layout_margin="20dp"
-                android:layout_marginTop="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/editText"
-                    android:inputType="textMultiLine"
-                    android:lines="4"
+                    android:inputType="textCapSentences |textMultiLine"
+                    android:lines="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>

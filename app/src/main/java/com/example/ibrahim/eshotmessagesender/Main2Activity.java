@@ -28,9 +28,4 @@ public class Main2Activity extends Activity {
         Intent intent = new Intent(Main2Activity.this,MainActivity.class);
         startActivity(intent);
     }
-
-    public void clickExit(View view) {
-
-        finish();
-    }
 }
