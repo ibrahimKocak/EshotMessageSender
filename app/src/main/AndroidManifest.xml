@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/eshot"
         android:supportsRtl="true"
         android:theme="@style/MyTheme">
-        <activity android:name=".Main2Activity">
+        <activity android:name=".Identification">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".Identification"></activity>
+        <activity android:name=".Main2Activity" />
     </application>
 
 </manifest>

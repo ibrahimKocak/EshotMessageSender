@@ -28,9 +28,14 @@ public class MainActivity extends Activity {
     private Spinner spinnerType,spinnerSubject;
     private EditText editText;
     private final DatabaseReference messages = FirebaseDatabase.getInstance().getReference("Messages");
-    private DatabaseReference ref;
+    private HashMap<String, HashMap<String, String>> map;
 
     private void init() {
+
+        Intent intent = getIntent();
+
+        map = new HashMap<>();
+        map.put("Id",(HashMap<String, String>) intent.getSerializableExtra("id"));
 
         spinnerType = findViewById(R.id.spinnerType);
         spinnerSubject = findViewById(R.id.spinnerSubject);
@@ -53,16 +58,16 @@ public class MainActivity extends Activity {
         String key =  messages.child(GetDate.getDate(false,null)).child(spinnerType.getSelectedItem().toString()).child(spinnerSubject.getSelectedItem().toString()).push().getKey();
 
         assert key != null;
-        ref = messages.child(GetDate.getDate(false,null)).child(spinnerType.getSelectedItem().toString()).child(spinnerSubject.getSelectedItem().toString()).child(key);
+        DatabaseReference ref = messages.child(GetDate.getDate(false, null)).child(spinnerType.getSelectedItem().toString()).child(spinnerSubject.getSelectedItem().toString());
 
-        HashMap<String,String> eMsg = new HashMap();
-        eMsg.put("Message", editText.getText().toString());
-        eMsg.put("Local Date", GetDate.getDate(true,null));
+        HashMap<String,String> message = new HashMap();
+        message.put("Message", editText.getText().toString());
+        message.put("Time Local", GetDate.getDate(true,null));
+        map.put("Message", new HashMap<>(message));
 
         try{
-
-            ref.setValue(eMsg);
-            ref.child("Server Timestamp").setValue(ServerValue.TIMESTAMP);
+            ref.child(map.get("Id").get("Id")).child(key).setValue(map);
+            ref.child(map.get("Id").get("Id")).child(key).child("Message").child("Time Database").setValue(ServerValue.TIMESTAMP);
 
             Toast.makeText(MainActivity.this, "Mesajınız iletildi",Toast.LENGTH_LONG).show();
 

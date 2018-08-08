@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="colorBackground">#EEC6E2F5</color>
+    <color name="colorBackground">#EEFFFFFF</color>
     <color name="colorMessage">#CCFFFFFF</color>
     <color name="colorListener">#EAF2F8</color>
     <color name="colorListenerBackground">#99FFFFFF</color>
+    <color name="colorRed">#FF0000</color>
     <color name="colorTemp">#FFFFFF</color>
 
 </resources>

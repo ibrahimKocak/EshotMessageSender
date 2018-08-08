@@ -5,54 +5,106 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+    android:background="@drawable/eshotbackground"
     tools:context=".Identification">
 
-    <EditText
-        android:id="@+id/et_IdNo"
-        android:hint="T.C Kimlik No"
+    <LinearLayout
+        android:background="@color/colorBackground"
+        android:padding="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal" />
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/et_Name"
-        android:hint="Adı"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName" />
+            <TextView
+                android:textSize="16dp"
+                android:textAlignment="center"
+                android:text="KİŞİSEL BİLGİLERİNİZ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
+        </LinearLayout>
 
-    <EditText
-        android:id="@+id/et_Surname"
-        android:hint="Soyad"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/et_BirtDay"
-        android:hint="Doğum Gün"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/et_IdNo"
+                android:hint="T.C Kimlik Numarası"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="11"
+                android:inputType="number" />
 
-    <EditText
-        android:id="@+id/et_BirtMonth"
-        android:hint="Doğum Ay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/et_Name"
+                android:hint="Adınız*"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/et_BirtYear"
-        android:hint="Doğum Yıl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/et_Surname"
+                android:hint="Soyadınız*"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/et_Birtday"
-        android:hint="T.C Kimlik No"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/et_Email"
+                android:hint="E-posta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
 
+            <EditText
+                android:id="@+id/et_Gsm"
+                android:hint="GSM (ör: 555 555 55 55)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="10"
+                android:inputType="number" />
 
+            <EditText
+                android:id="@+id/et_Phone"
+                android:hint="Telefon (ör: 232 222 22 22)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tv_Error"
+                android:text="\n\n"
+                android:textColor="@color/colorRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="ÖNERİ - ŞİKAYET - MEMNUNİYET\n YAZ"
+                android:onClick="bt_onclick_Write"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
