@@ -56,14 +56,14 @@
 
                 <EditText
                     android:id="@+id/editText"
-                    android:inputType="textCapSentences |textMultiLine"
+                    android:inputType="textCapSentences|textMultiLine"
                     android:lines="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
             <Button
-                android:text="Send"
+                android:text="Gönder"
                 android:onClick="clickSend"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

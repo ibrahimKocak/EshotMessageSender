@@ -1,5 +1,6 @@
 package com.example.ibrahim.eshotmessagesender;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +22,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ActionBar actionBar = getActionBar();
+        actionBar.setDisplayShowTitleEnabled(false);
 
         init();
     }
@@ -71,7 +75,7 @@ public class MainActivity extends Activity {
 
             Toast.makeText(MainActivity.this, "Mesajınız iletildi",Toast.LENGTH_LONG).show();
 
-            Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+            Intent intent = new Intent(MainActivity.this,Identification.class);
             startActivity(intent);
             finish();
 
