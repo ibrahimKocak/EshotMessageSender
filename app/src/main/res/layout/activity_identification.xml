@@ -48,14 +48,14 @@
 
             <EditText
                 android:id="@+id/et_Name"
-                android:hint="Adınız*"
+                android:hint="Adınız"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapSentences|textPersonName" />
 
             <EditText
                 android:id="@+id/et_Surname"
-                android:hint="Soyadınız*"
+                android:hint="Soyadınız"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapSentences|textPersonName" />

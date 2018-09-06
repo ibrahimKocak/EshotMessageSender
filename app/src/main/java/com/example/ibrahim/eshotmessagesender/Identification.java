@@ -41,7 +41,9 @@ public class Identification extends Activity {
 
         Intent intent = new Intent(this, MainActivity.class);
 
-        if(wrongChecker(et_IdNo.getText().toString(),et_Name.getText().toString(),et_Surname.getText().toString(),et_Email.getText().toString(),et_Gsm.getText().toString(),et_Phone.getText().toString())){
+        if(inputChecker(et_IdNo.getText().toString(),et_Name.getText().toString(),
+                et_Surname.getText().toString(),et_Email.getText().toString(),
+                et_Gsm.getText().toString(),et_Phone.getText().toString())){
 
             HashMap map = new HashMap();
 
@@ -57,7 +59,7 @@ public class Identification extends Activity {
         }
     }
 
-    private boolean wrongChecker(String id, String name, String surname, String email, String gsm, String phone){
+    private boolean inputChecker(String id, String name, String surname, String email, String gsm, String phone){
 
         if(wrongId(id)) {
             tv_error.setText("Lütfen geçerli bir T.C Kimlik numarası giriniz..");
