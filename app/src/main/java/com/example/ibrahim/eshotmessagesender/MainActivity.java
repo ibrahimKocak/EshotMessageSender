@@ -80,7 +80,6 @@ public class MainActivity extends Activity {
             finish();
 
         }catch (Exception e){
-
             Toast.makeText(MainActivity.this, "Bağlantı hatası mesajınız iletilemedi",Toast.LENGTH_LONG).show();
         }
     }

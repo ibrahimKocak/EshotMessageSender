@@ -85,10 +85,10 @@
 
             <TextView
                 android:id="@+id/tv_Error"
-                android:text="\n\n"
-                android:textColor="@color/colorRed"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textColor="@color/colorRed" />
 
         </LinearLayout>
 

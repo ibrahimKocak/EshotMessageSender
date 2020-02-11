@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Eshot Message Sender</string>
+    <string name="app_name" />
 
     <string-array name="listType">
         <item>Öneri</item>
@@ -17,6 +17,5 @@
         <item>İzmirim Kart</item>
         <item>Diğer</item>
     </string-array>
-
 
 </resources>
